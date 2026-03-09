@@ -68,6 +68,8 @@ react-native-safe-area-context
 react-native-gesture-handler
 react-native-reanimated
 
+npm install @react-navigation/native-stack
+
 Purpose:
 Screen navigation, stack navigation, bottom tabs,
 drawer menu, gestures and navigation animations.
