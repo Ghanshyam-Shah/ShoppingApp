@@ -6,9 +6,11 @@ import CartScreen from "@features/cart/screens/CartScreen";
 const Stack = createNativeStackNavigator<CartStackParamList>();
 
 const CartStackNavigator = () => {
-  <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name="CartMain" component={CartScreen} />
-  </Stack.Navigator>;
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="CartMain" component={CartScreen} />
+    </Stack.Navigator>
+  );
 };
 
 export default CartStackNavigator;

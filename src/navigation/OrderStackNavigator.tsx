@@ -7,10 +7,12 @@ import OrderDetailScreen from "@features/orders/screens/OrderDetailScreen";
 const Stack = createNativeStackNavigator<OrderStackParamList>();
 
 const OrderStackNavigator = () => {
-  <Stack.Navigator>
-    <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
-    <Stack.Screen name="OrderDetail" component={OrderDetailScreen} />
-  </Stack.Navigator>;
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="OrderHistory" component={OrderHistoryScreen} />
+      <Stack.Screen name="OrderDetail" component={OrderDetailScreen} />
+    </Stack.Navigator>
+  );
 };
 
 export default OrderStackNavigator;

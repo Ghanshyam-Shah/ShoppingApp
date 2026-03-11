@@ -7,10 +7,12 @@ import EditProfileScreen from "@features/profile/screens/EditProfileScreen";
 const Stack = createNativeStackNavigator<ProfileStackParamList>();
 
 const ProfileStackNavigator = () => {
-  <Stack.Navigator>
-    <Stack.Screen name="ProfileMain" component={ProfileScreen} />
-    <Stack.Screen name="EditProfile" component={EditProfileScreen} />
-  </Stack.Navigator>;
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="ProfileMain" component={ProfileScreen} />
+      <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+    </Stack.Navigator>
+  );
 };
 
 export default ProfileStackNavigator;

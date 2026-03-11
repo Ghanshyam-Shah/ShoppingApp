@@ -9,14 +9,16 @@ import ProductManagementScreen from "@features/products/screens/ProductManagemen
 const Stack = createNativeStackNavigator<ProductStackParamList>();
 
 const ProductStackNavigator = () => {
-  <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name="ProductList" component={ProductListScreen} />
-    <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
-    <Stack.Screen
-      name="ProductManagement"
-      component={ProductManagementScreen}
-    />
-  </Stack.Navigator>;
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="ProductList" component={ProductListScreen} />
+      <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
+      <Stack.Screen
+        name="ProductManagement"
+        component={ProductManagementScreen}
+      />
+    </Stack.Navigator>
+  );
 };
 
 export default ProductStackNavigator;

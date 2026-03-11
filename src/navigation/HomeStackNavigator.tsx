@@ -6,9 +6,11 @@ import HomeScreen from "@features/home/screens/HomeScreen";
 const Stack = createNativeStackNavigator<HomeStackParamList>();
 
 const HomeStackNavigator = () => {
-  <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name="HomeMain" component={HomeScreen} />
-  </Stack.Navigator>;
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="HomeMain" component={HomeScreen} />
+    </Stack.Navigator>
+  );
 };
 
 export default HomeStackNavigator;
