@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
   // Baad mein Redux se aayega — abhi testing ke liye
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>

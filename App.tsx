@@ -1,18 +1,31 @@
-import RootNavigator from "@navigation/RootNavigator";
-import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
+import RootNavigator from "./src/navigation/RootNavigator";
+import { ThemeProvider, useTheme } from "./src/app/providers/ThemeProvider";
+
+// NavigationContainer ko theme se aware banao
+const AppContent = () => {
+  const { isDark } = useTheme();
+  return (
+    <>
+      <StatusBar style={isDark ? "light" : "dark"} />
+      <RootNavigator />
+    </>
+  );
+};
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
-        <NavigationContainer>
-          <StatusBar style="auto" />
-          <RootNavigator />
-        </NavigationContainer>
+        <ThemeProvider>
+          <NavigationContainer>
+            <AppContent />
+          </NavigationContainer>
+        </ThemeProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
